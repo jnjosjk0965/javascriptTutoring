@@ -180,7 +180,7 @@ console.log(5 === "5"); //false
 | && | 논리곱 연산자(AND) |
 
 ```jsx
-!true
+!true //false
 true || false // true
 true && false // false
 ```
