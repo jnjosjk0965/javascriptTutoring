@@ -121,11 +121,11 @@ DOM 이란 Document Object Model의 약자로 HTML 문서의 모든 요소를 �
 </html>
 ```
 
-![DOM.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/67a8bc4e-62e6-4a86-ac2d-10bcd390848e/aece6f31-20ed-43da-8761-1822135d4933/DOM.jpg)
+![DOM.jpg](https://github.com/jnjosjk0965/javascriptTutoring/blob/main/ch04/img/DOM.jpg?raw=true)
 
 이를 브라우저에서 직접 확인하면 다음과 같다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/67a8bc4e-62e6-4a86-ac2d-10bcd390848e/ba226d7a-d130-473f-a726-25fcfb496a9a/Untitled.png)
+![devtool.png](https://github.com/jnjosjk0965/javascriptTutoring/blob/main/ch04/img/devTool.png?raw=true)
 
 우리는 자바스크립트를 통해 해당 요소의 속성(attribute)에 접근하여 수정할 수 있다.
 
