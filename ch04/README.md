@@ -251,9 +251,6 @@ class 선택자 : .boo
 </body>
 </html>
 ```
-
-동적으로 작동해 예상한 결과와 다르다.
-
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/67a8bc4e-62e6-4a86-ac2d-10bcd390848e/f197d051-f6b2-4680-9a48-a84f1bd37cac/Untitled.png)
+적용해보면 HTMLCollection이 동적으로 작동해 예상한 결과와 다르다.
 
 - NodeList : querySelectorAll() 메서드가 반환 하는 객체는 정적이다. 하지만 요소의 프로퍼티인 childNodes 의 NodeList는 동적이다.
