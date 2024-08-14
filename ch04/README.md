@@ -254,3 +254,92 @@ class 선택자 : .boo
 적용해보면 HTMLCollection이 동적으로 작동해 예상한 결과와 다르다.
 
 - NodeList : querySelectorAll() 메서드가 반환 하는 객체는 정적이다. 하지만 요소의 프로퍼티인 childNodes 의 NodeList는 동적이다.
+
+## DOM 수정하기
+
+### 요소 생성하기
+
+- document.createElement(tag) : 태그 이름을 사용해 새로운 요소 노드를 만듦
+- document.createTextNode(text) : 주어진 텍스트를 사용해 새로운 텍스트 노드를 만듦
+
+```html
+<style>
+.alert {
+	padding: 15px;
+	border: 1px solid #d6e9c6;
+	border-radius: 4px;
+	color: #3c76cd;
+	background-color: #dff0d8;
+}
+</style>
+<script>
+	// 메시지 생성
+	let div = document.createElement('div');
+	div.className = "alert";
+	div.innerHTML = "<strong>[중요]</strong> 공지사항이 있습니다.";
+	// 
+</script>
+```
+
+### 삽입 메서드
+
+생성한 `div` 가 화면에 나타나게 하려면 document 어딘가에 `div` 를 삽입해야한다.
+
+이를 위해선 node.append()를 사용해 추가해 줄 수 있다.
+
+```html
+<script>
+	// 메시지 생성
+	let div = document.createElement('div');
+	div.className = "alert";
+	div.innerHTML = "<strong>[중요]</strong> 공지사항이 있습니다.";
+	// 메시지 삽입
+	document.body.append(div);
+</script>
+```
+
+**노드 삽입 메서드**
+
+- node.append(노드 또는 문자열) : 노드 또는 문자열을 node 끝에 삽입합.
+- node.prepend(노드 또는 문자열) : 노드 또는 문자열을 node 맨 앞에 삽입합.
+- node.before(노드 또는 문자열) : 노드 또는 문자열을 node 이전에 삽입합.
+- node.after(노드 또는 문자열) : 노드 또는 문자열을 node 다음에 삽입합.
+- node.replaceWith(노드 또는 문자열) : node를 새로운 노드나 문자열로 대체함.
+
+```html
+<body>
+	<!--before-->
+	<div id="base">
+		<!--append-->
+		<p>첫번째 문장</p>
+		<!--prepend-->
+	</div>
+	<!--after-->
+</body>
+```
+
+**노드 삭제**
+
+node.remove() : 노드를 삭제합니다.
+
+**노드 복제**
+
+element.cloneNode(boolean) : element를 복제합니다.
+
+- true : 자식 요소도 복사 (깊은 복사)
+- false : 자식 요소 복사 없이 element만 복사 (얕은 복사)
+
+```html
+<script>
+	// 메시지 생성
+	let div = document.createElement('div');
+	div.className = "alert";
+	div.innerHTML = "<strong>[인사]</strong> 어서오세요!";
+	// 메시지 삽입
+	document.body.append(div);
+	// 메시지 복제
+	let div2 = div.cloneNode(true); // 메시지 창 복제
+	div2.innerHTML = "<strong>[중요]</strong> 공지사항이 있습니다.";
+	div.after(div2);
+</script>
+```
