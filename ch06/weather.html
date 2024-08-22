@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <style>
+        .container {
+            display: flex;
+            width: 150px;
+            height: 100px;
+            border: 1px solid #555;
+            padding: 10px;
+        }
+        #weather{
+            flex: 1;
+            display: flex;
+            border-right: 1px solid #555;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .weather-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 10px;
+        }
+        #temp, #city {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="weather">날씨</div>
+        <div class="weather-info">
+            <div id="temp">온도</div>
+            <div id="city">도시</div>
+        </div>
+    </div>
+    <script src="weather.js"></script>
+</body>
+</html>
