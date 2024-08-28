@@ -262,3 +262,31 @@ a = 8;
 let name = prompt("이름을 입력하세요");
 console.log("안녕하세요 " + name + "님"); 
 ```
+
+## var과 let, const 차이
+
+1. 스코프
+
+var은 함수 스코프, let과 const는 블록 스코프
+
+2. 호이스팅
+
+var, let, const 모두 선언은 호이스팅(끌어올림)하지만 var은 undefined로 초기화하여 선언 후 참조 가능
+
+```jsx
+console.log(a); // undefined
+var a = 10;
+```
+
+let과 const는 선언된 위치에서 초기화를 진행하여 초기화 이전에는 참조할 수 없다.
+
+```jsx
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 10;
+```
+
+3. 중복 선언
+
+var은 동일한 이름으로 변수 선언 가능 
+
+let과 const는 불가능
